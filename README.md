@@ -15,7 +15,7 @@ Once you are finished creating your model, make sure to commit your changes, pus
 
 ## 📝 Instructions
 
-**Predicting Titanic survival using Random Forest**
+**Predicting Titanic survival using XGBoost**
 
 We need to build a predictive model that answers the question: “what sorts of people were more likely to survive?” using passenger data (ie name, age, gender, socio-economic class, etc). To be able to predict which passengers were more likely to survive we will use XGBoost to train the model.
 
