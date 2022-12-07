@@ -28,6 +28,8 @@ Once you are finished creating your model, make sure to commit your changes, pus
 
 The dataset can be found in this project folder as 'bike_sharing_dataset.csv' file. The core data set is related to the two-year historical log corresponding to years 2011 and 2012 from Capital Bikeshare system, Washington D.C., USA which is publicly available in http://capitalbikeshare.com/system-data. You are also welcome to load it directly from the following link (`https://raw.githubusercontent.com/4GeeksAcademy/random-forest-project-tutorial/main/impressions.csv`), or to download it and add it to your data/raw folder. In that case, don't forget to add the data folder to the .gitignore file.
 
+You can find the description of each feature in the 'data-dictionary' file on this folder.
+
 Time to work on it!
 
 **Step 2:**
