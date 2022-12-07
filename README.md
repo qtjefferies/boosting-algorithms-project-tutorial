@@ -4,7 +4,7 @@
 
 - Bike sharing system can be a virtual sensor network that can be used for sensing mobility in a city. Hence, it is expected that most of important events in the city could be detected via monitoring these data.
 
-- In this project, practice your new Boosting Algorithm skills trying to predict bike rental in a specific city. 
+- In this project, practice your new Boosting Algorithm skills trying to predict the number of bike rentals in a specific city. 
 
 
 ## 🌱  How to start this project
