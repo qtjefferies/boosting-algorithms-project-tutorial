@@ -9,5 +9,5 @@
 	"syntax": "python",
 	"duration" : 2,
     "projectType": "project",
-	"description" : "Use XGBoost algorithm to optimize your previous models done in Titanic dataset"
+	"description" : "Use XGBoost algorithm "
 }
