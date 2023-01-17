@@ -56,17 +56,3 @@ pickle.dump(model, open(filename, 'wb'))
 ```
 
 En tu archivo README escribe un breve resumen.
-
-
-
-
-
-
-
-
-
-
-Jot something down
-
-
-
