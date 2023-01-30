@@ -50,3 +50,9 @@ To save your model and be able to use it later use the following code:
 📝
 
 In your README file write a brief summary.
+
+```py
+import pickle
+filename = 'finalized_model.sav'
+pickle.dump(model, open(filename, 'wb'))
+```
