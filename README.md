@@ -1,19 +1,17 @@
 <!-- hide -->
-# Boosting Algorithm Project Tutorial
+# Random Forests
 <!-- endhide -->
 
-- Bike sharing system can be a virtual sensor network that can be used for sensing mobility in a city. Hence, it is expected that most of important events in the city could be detected via monitoring these data.
-
-- In this project, practice your new Boosting Algorithm skills trying to predict the number of bike rentals in a specific city. 
-
+- Use the data you have analyzed in the previous two projects.
+- Continue with the development to find a model that fits better.
 
 ## 🌱  How to start this project
 
-You will not be forking this time, please take some time to read this instructions:
+You will not be forking this time, please take some time to read these instructions:
 
 1. Create a new repository based on [machine learning project](https://github.com/4GeeksAcademy/machine-learning-python-template/generate) by [clicking here](https://github.com/4GeeksAcademy/machine-learning-python-template).
-2. Open the recently created repository on Gitpod by using the [Gitpod button extension](https://www.gitpod.io/docs/browser-extension/).
-3. Once Gitpod VSCode has finished opening you start your project following the Instructions below.
+2. Open the newly created repository in Codespace using the [Codespace button extension](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Once the Codespace VSCode has finished opening, start your project by following the instructions below.
 
 ## 🚛 How to deliver this project
 
@@ -21,38 +19,28 @@ Once you are finished creating your model, make sure to commit your changes, pus
 
 ## 📝 Instructions
 
-**Predicting bike rental using Boosting Algorithm**
+### Predicting diabetes
 
-**Step 1:**
+In the two previous projects we saw how we could use a decision tree and then a random forest to improve the prediction of diabetes. We have reached a point where we need to improve. Can boosting be the best alternative to optimize the results?
 
-The dataset can be found in this project folder as 'bike_sharing_dataset.csv' file. The core data set is related to the two-year historical log corresponding to years 2011 and 2012 from Capital Bikeshare system, Washington D.C., USA which is publicly available in http://capitalbikeshare.com/system-data. You are also welcome to load it directly from the following link (`https://raw.githubusercontent.com/4GeeksAcademy/random-forest-project-tutorial/main/impressions.csv`), or to download it and add it to your data/raw folder. In that case, don't forget to add the data folder to the .gitignore file.
+Boosting is a sequential composition of models (usually decision trees) in which the new model aims to correct the errors of the previous one. This view may be useful in this data set, since several of the assumptions studied in the module are met.
 
-You can find the description of each feature in the 'data-dictionary.md' file on this folder.
+In this project you will focus on this idea by training the dataset to improve the $accuracy$.
 
-Time to work on it!
+Remember that previous projects can be found [here](https://github.com/4GeeksAcademy/decision-tree-project-tutorial) (decision trees) and [here](https://github.com/4GeeksAcademy/random-forest-project-tutorial) (random forest).
 
-**Step 2:**
+#### Step 1: Loading the dataset
 
-Explore and clean the data.
+Loads the processed dataset from the previous project (split into training and test samples and analyzed with EDA).
 
-**Step 3:**
+#### Step 2: Build a boosting
 
-Build a first baseline model using Linear Regression. Chose an evaluation metric. Then, use a boosting algorithm and evaluate the performance of both models.
+One way to optimize and improve the results is to generate a boosting so that there is the necessary variety to enrich the prediction. Train it and analyze its results. Try modifying the hyperparameters that define the model with different values and analyze their impact on the final accuracy and plot the conclusions.
 
-**Step 4:**
+#### Step 3: Save the model
 
-Use the app.py to create your pipeline. 
+Store the model in the corresponding folder.
 
-**Step 5:**
+#### Step 4: Analyze and compare model results
 
-To save your model and be able to use it later use the following code:
-
-```py
-
-import pickle
-
-filename = 'finalized_model.sav'
-pickle.dump(model, open(filename, 'wb'))
-```
-
-In your README file write a short summary.
+Make a study now of the three models used, analyze their predictions, the class with the highest prediction accuracy and the one with the lowest. Which of the three models do you choose?

@@ -1,58 +1,46 @@
 <!-- hide -->
-# Tutorial de Proyecto de Algoritmo de Impulso
+# Random forests
 <!-- endhide -->
 
-- El sistema de compartición de bicicletas puede ser una red de sensores virtual que se puede usar para detectar la movilidad en una ciudad. Por lo tanto, se espera que la mayoría de los eventos importantes en la ciudad se puedan detectar a través del monitoreo de estos datos.
+- Utiliza los datos que hemos analizado en los dos proyectos anteriores.
+- Continúa con el desarrollo para buscar un modelo que se adapte mejor.
 
-- En este proyecto, practica tus nuevas habilidades de algoritmo de aumento intentando predecir el número de alquileres de bicicletas en una ciudad específica.
+## 🌱  Cómo iniciar este proyecto
 
-## 🌱 Cómo comenzar este proyecto
+Esta vez no se hará Fork, tómate un tiempo para leer estas instrucciones:
 
-Esta vez no harás un fork, por favor toma un tiempo para leer estas instrucciones:
-
-1. Crea un nuevo repositorio basado en [proyecto de aprendizaje automático](https://github.com/4GeeksAcademy/machine-learning-python-template/generate) haciendo [clic aquí](https://github.com/4GeeksAcademy/machine-learning-python-template).
-2. Abre el repositorio recién creado en Gitpod usando la [extensión del botón Gitpod](https://www.gitpod.io/docs/browser-extension/).
-3. Una vez que VSCode de Gitpod haya terminado de abrir, comienza tu proyecto siguiendo las instrucciones a continuación.
+1. Crear un nuevo repositorio basado en el [proyecto de Machine Learing](https://github.com/4GeeksAcademy/machine-learning-python-template/generate) [haciendo clic aquí](https://github.com/4GeeksAcademy/machine-learning-python-template).
+2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Una vez que el VSCode del Codespace haya terminado de abrirse, comienza tu proyecto siguiendo las instrucciones a continuación.
 
 ## 🚛 Cómo entregar este proyecto
 
-Una vez que hayas terminado de crear tu modelo, asegúrate de confirmar tus cambios, empujar a tu repositorio y dirigirte a 4Geeks.com para cargar el enlace del repositorio.
+Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, hazle "push" al fork de tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
 
 ## 📝 Instrucciones
 
-**Predicción de alquiler de bicicletas usando el Algoritmo de Boosting**
+### Prediciendo la diabetes
 
-**Paso 1:**
+En los dos proyectos anteriores vimos cómo podíamos utilizar un árbol de decisión y después un random forest para mejorar la predicción de la diabetes. Hemos llegado a un punto en el que necesitamos mejorar. ¿Puede ser boosting la mejor de las alternativas para optimizar los resultados?
 
-El conjunto de datos se puede encontrar en esta carpeta del proyecto como el archivo 'bike_sharing_dataset.csv'. El conjunto de datos principal está relacionado con el registro histórico de dos años correspondiente a los años 2011 y 2012 del sistema Capital Bikeshare, Washington D.C., EE. UU., Que está disponible públicamente en http://capitalbikeshare.com/system-data. También puedes cargarlo directamente desde el siguiente enlace (`https://raw.githubusercontent.com/4GeeksAcademy/random-forest-project-tutorial/main/impressions.csv`), o descargarlo y agregarlo a tu carpeta de datos/raw. En ese caso, no olvides agregar la carpeta de datos al archivo .gitignore.
+Boosting es una composición de modelos (generalmente árboles de decisión) secuencial en la cual el modelo nuevo persigue corregir los errores del anterior. Puede que esta visión nos sea útil en este conjunto de datos, ya que se cumplen varias de las suposiciones estudiadas en el módulo.
 
-Puedes encontrar la descripción de cada característica en el archivo 'data-dictionary.md' de esta carpeta.
+En este proyecto te centrarás en esta idea entrenando el conjunto de datos para mejorar el $accuracy$.
 
-¡Es hora de trabajar en ello!
+Recuerda que los proyectos anteriores puedes encontrarlos [aquí](https://github.com/4GeeksAcademy/decision-tree-project-tutorial) (árboles de decisión) y [aquí](https://github.com/4GeeksAcademy/random-forest-project-tutorial) (random forest).
 
-**Paso 2:**
+#### Paso 1: Carga del conjunto de datos
 
-Explora y limpia los datos.
+Carga el conjunto de datos procesado del proyecto anterior (dividido en muestras de entrenamiento y pruebas y analizado con el EDA).
 
-**Paso 3:**
+#### Paso 2: Construye un boosting
 
-Construye un primer modelo de línea base usando Regresión Lineal. Elige una métrica de evaluación. Luego, usa un algoritmo de boosting y evalúa el rendimiento de ambos modelos.
+Una forma de optimizar y mejorar los resultados es generar un boosting de tal forma que haya una variedad necesaria que enriquezca la predicción. Entrénalo y analiza sus resultados. Prueba a modificar los hiperparámetros que definen al modelo con distintos valores y analiza su impacto con la precisión final y grafica las conclusiones.
 
-**Paso 4:**
+#### Paso 3: Guarda el modelo
 
-Usa app.py para crear tu tubería.
+Almacena el modelo en la carpeta correspondiente.
 
-**Paso 5:**
+#### Paso 4: Analiza y compara los resultados de los modelos
 
-Para guardar tu modelo y poder usarlo más tarde, usa el siguiente código:
-py
-
-```py
-
-import pickle
-
-filename = 'finalized_model.sav'
-pickle.dump(model, open(filename, 'wb'))
-```
-
-En tu archivo README escribe un breve resumen.
+Haz un estudio ahora de los tres modelos utilizados, analiza sus predicciones, la clase con más precisión de predicción y la que menos. ¿Con cuál de los tres modelos te quedas?
